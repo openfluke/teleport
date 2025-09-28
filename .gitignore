@@ -1,0 +1,12 @@
+# Build caches
+/build/
+tmp/
+*.obj
+*.pdb
+
+# Keep release artifacts out of commits by default:
+release/**
+# …but allow a top-level manifest if you want
+!release/.keep
+
+# Let CI upload /release to GitHub Releases instead of committing binaries.
