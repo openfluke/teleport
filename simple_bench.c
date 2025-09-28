@@ -240,12 +240,13 @@ int main(void){
         // Add {"XXL", 3072, 4} if you want ~123MB weights stress
     };
 
-    const int IN  = 784;
-    const int OUT = 10;
-    const int RUNS = 100;
+    // Use different names to avoid Windows macro conflicts
+    const int INPUT_DIM  = 784;
+    const int OUTPUT_DIM = 10;
+    const int NUM_RUNS = 100;
 
     for (int i=0;i<10;i++){
-        run_case(cases[i].name, IN, cases[i].hidden, cases[i].hidden_layers, OUT, RUNS);
+        run_case(cases[i].name, INPUT_DIM, cases[i].hidden, cases[i].hidden_layers, OUTPUT_DIM, NUM_RUNS);
     }
     return 0;
 }

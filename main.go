@@ -2,6 +2,16 @@ package main
 
 /*
 #include <stdlib.h>
+#include <stdbool.h>
+
+// Ensure bool/true/false are available
+#ifndef __cplusplus
+#ifndef bool
+#define bool _Bool
+#define true 1
+#define false 0
+#endif
+#endif
 */
 import "C"
 
